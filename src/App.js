@@ -7,20 +7,31 @@ function App() {
   const [cart, setCart] = useState([]);
 
   const fetchProducts = async () => {
-      const {data} = await commerce.products.list();
-      setProducts(data);
+    const {data} = await commerce.products.list();
+    setProducts(data);
+  }
+
+  const fetchCart = async () => {
+    setCart(await commerce.cart.retrieve());
+  }
+
+  const handleAddToCart = async (productId, quantity) => {
+    const item = await commerce.cart.add(productId, quantity);
+
+    setCart(item.cart)
   }
 
 
   useEffect(() => {
-    fetchProducts()
-    console.log(products)
+    fetchProducts();
+    fetchCart();
   }, [''])
+  console.log(cart)
 
   return (
     <div className="App">
-        <Navbar/>
-        <Products products = {products}/>
+        <Navbar totalItems = {cart.total_items}/>
+        <Products handleAddToCart={handleAddToCart}products = {products}/>
     </div>
   );
 }
