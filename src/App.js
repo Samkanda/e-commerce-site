@@ -49,7 +49,6 @@ function App() {
           <Switch>
             <Route exact path="/">
               <Landing/>
-              
               <Products handleAddToCart={handleAddToCart} products = {products}/>
             </Route>
             <Route exact path="/cart">

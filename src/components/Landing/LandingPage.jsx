@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import BlueLandingPage from './BlueLandingPage/Landing';
 import RedLandingPage from './RedLandingPage/Landing';
 import BlackLandingPage from './BlackLandingPage/Landing'

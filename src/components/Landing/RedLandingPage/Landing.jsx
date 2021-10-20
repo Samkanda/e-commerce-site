@@ -1,10 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import {AppBar, Typography, Grid} from '@material-ui/core';
-import {ShoppingCart, ArrowDownwardSharp} from '@material-ui/icons';
+import {Typography, Grid} from '@material-ui/core';
+import {ArrowDownwardSharp} from '@material-ui/icons';
 
 import shoe from '../../../assets/redShoe.png'
-// import shoe from '../../assets/blueJordan.png'
 import useStyles from '../RedLandingPage/styles';
 
 const Landing = ({bluePageChanger, redPageChanger, blackPageChanger}) => {

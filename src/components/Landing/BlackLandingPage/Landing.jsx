@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {AppBar, Typography, Grid} from '@material-ui/core';
+import {Typography, Grid} from '@material-ui/core';
 import {ArrowDownwardSharp} from '@material-ui/icons';
 
 import shoe from '../../../assets/blackShoe.png'

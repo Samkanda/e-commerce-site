@@ -1,7 +1,6 @@
 import React from 'react'
-import {AppBar, Toolbar, IconButton, Badge, MenuItem, Menu, Typography} from '@material-ui/core';
+import {AppBar, Toolbar, IconButton, Badge, Typography} from '@material-ui/core';
 import {ShoppingCart} from '@material-ui/icons';
-import logo from '../../assets/commerce.png';
 import useStyles from './styles';
 import {Link, useLocation} from 'react-router-dom';
 
@@ -12,7 +11,7 @@ const Navbar = ({totalItems}) => {
         <AppBar position="relative" className={classes.appBar} >
             <Toolbar>
                 <Typography variant="h6" component={Link} to="/" className={classes.title} color="inherit">
-                    {/* <img src={logo} alt="NIKE" height="25px" className={classes.image}/> */}
+                    
                     NIKE
                 </Typography>
                 <div className={classes.grow}/>
