@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/e-commerce-site/static/css/main.45fb4690.chunk.css",
-    "main.js": "/e-commerce-site/static/js/main.02bd02e4.chunk.js",
-    "main.js.map": "/e-commerce-site/static/js/main.02bd02e4.chunk.js.map",
+    "main.js": "/e-commerce-site/static/js/main.5e969144.chunk.js",
+    "main.js.map": "/e-commerce-site/static/js/main.5e969144.chunk.js.map",
     "runtime-main.js": "/e-commerce-site/static/js/runtime-main.7774332e.js",
     "runtime-main.js.map": "/e-commerce-site/static/js/runtime-main.7774332e.js.map",
     "static/js/2.9c02f7bb.chunk.js": "/e-commerce-site/static/js/2.9c02f7bb.chunk.js",
@@ -12,13 +12,12 @@
     "static/js/2.9c02f7bb.chunk.js.LICENSE.txt": "/e-commerce-site/static/js/2.9c02f7bb.chunk.js.LICENSE.txt",
     "static/media/blackShoe.d54036c6.png": "/e-commerce-site/static/media/blackShoe.d54036c6.png",
     "static/media/blueShoe.a9a7497e.png": "/e-commerce-site/static/media/blueShoe.a9a7497e.png",
-    "static/media/commerce.457bea4f.png": "/e-commerce-site/static/media/commerce.457bea4f.png",
     "static/media/redShoe.e99dcd6d.png": "/e-commerce-site/static/media/redShoe.e99dcd6d.png"
   },
   "entrypoints": [
     "static/js/runtime-main.7774332e.js",
     "static/js/2.9c02f7bb.chunk.js",
     "static/css/main.45fb4690.chunk.css",
-    "static/js/main.02bd02e4.chunk.js"
+    "static/js/main.5e969144.chunk.js"
   ]
 }
