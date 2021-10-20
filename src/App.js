@@ -1,13 +1,13 @@
 import React, {useState, useEffect} from 'react';
-import {Products, Navbar, Cart, Checkout} from './components/';
+import './App.css'
+import {Products, Navbar, Cart, Checkout, Landing, RedLanding} from './components';
 import {commerce} from './lib/commerce';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-// import {Link} from 'react-router-dom';
 
 function App() {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
-
+  
   const fetchProducts = async () => {
     const {data} = await commerce.products.list();
     setProducts(data);
@@ -48,6 +48,8 @@ function App() {
           <Navbar totalItems = {cart.total_items}/>
           <Switch>
             <Route exact path="/">
+              <Landing/>
+              
               <Products handleAddToCart={handleAddToCart} products = {products}/>
             </Route>
             <Route exact path="/cart">

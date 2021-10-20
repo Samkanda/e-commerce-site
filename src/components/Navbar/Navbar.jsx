@@ -9,11 +9,11 @@ const Navbar = ({totalItems}) => {
     const classes = useStyles();
     const location = useLocation();
     return (
-        <AppBar position="fixed" className={classes.appBar} color="inherit">
+        <AppBar position="relative" className={classes.appBar} >
             <Toolbar>
                 <Typography variant="h6" component={Link} to="/" className={classes.title} color="inherit">
-                    <img src={logo} alt="Commerce.js" height="25px" className={classes.image}/>
-                    Commerce.js
+                    {/* <img src={logo} alt="NIKE" height="25px" className={classes.image}/> */}
+                    NIKE
                 </Typography>
                 <div className={classes.grow}/>
                 {location.pathname === '/' && (
@@ -24,7 +24,6 @@ const Navbar = ({totalItems}) => {
                         </Badge>
                     </IconButton>
                 </div>)}
-                
             </Toolbar>
         </AppBar>
     )
