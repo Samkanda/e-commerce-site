@@ -10,8 +10,7 @@ const Navbar = ({totalItems}) => {
     return (
         <AppBar position="relative" className={classes.appBar} >
             <Toolbar>
-                <Typography variant="h6" component={Link} to="/" className={classes.title} color="inherit">
-                    
+                <Typography variant="h6" component={Link} to="/" className={classes.title} >
                     NIKE
                 </Typography>
                 <div className={classes.grow}/>

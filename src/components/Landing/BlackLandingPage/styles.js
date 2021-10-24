@@ -9,20 +9,21 @@ export default makeStyles((theme) => ({
         position: "relative",
     },
     subtitle: {
-        paddingTop: "15vw",
+        top: '45%',
         fontSize: "2.1vw",
         fontFamily: '"Raleway", "sans-serif"',
-        paddingLeft: '73vw',
-        position: "absolute",
-    
+        paddingLeft: '74vw',
+        lineHeight: '.8',
+        position: 'absolute',
     },
     title: {
+        top: '50%',
         fontSize: "20vw",
-        paddingTop: "10.5vw",
         fontFamily: '"Raleway", "sans-serif"',
         color: '#44474a',    
         textAlign: "center",
         position: "absolute",
+        lineHeight: '.8',
         left: 0,
         right: 0,
     },
@@ -41,13 +42,16 @@ export default makeStyles((theme) => ({
     rightTitle: {
         fontSize: "1.8vw",
         fontFamily: '"Oswald", "sans-serif"',
-        float:'right',
-        textAlign: 'right',
         writingMode: 'vertical-lr',
         transform: 'rotate(-180deg)',
-        paddingBottom: '5vw',
-        paddingLeft: '1rem',
+        paddingBottom: '1vw',
         color: "white",
+        position: 'absolute',
+        paddingRight: '1rem',
+        "@media (max-width: 980px)": {
+                visibility: 'hidden',
+                marginBottom: '-3rem',
+          },
     },
     dot: {
         height: "10px",
@@ -56,11 +60,14 @@ export default makeStyles((theme) => ({
         display: "inline-block",
         cursor: "pointer",
         marginTop: '.9rem',
+        "@media (max-width: 980px)": {
+            visibility: 'visible',
+      },
     },
     description: {
         paddingLeft: '12vw',
         paddingRight: '2vw',
-        paddingTop: '6.5vw',
+        paddingTop: '5%',
         fontFamily: '"Oswald", "sans-serif"',
         fontSize: '1vw',
         textAlign: 'justify',
@@ -74,15 +81,23 @@ export default makeStyles((theme) => ({
         cursor: "pointer",
         animation: '$desAnimation 2s infinite',
         "@media (max-width: 980px)": {
+            animation: '$minAnimation 2s infinite',
+          },
+          "@media (max-width: 580px)": {
             animation: '$mobAnimation 2s infinite',
           },
     },
     '@keyframes desAnimation': {
-        '0%, 100%': { paddingTop: '3vw' },
-        '50%': { paddingTop: '5vw' },
+      '0%, 100%': { paddingTop: '6vw' },
+      '50%': { paddingTop: '8vw' },
       },
-    '@keyframes mobAnimation': {
-        '0%, 100%': { paddingTop: '9vw' },
-        '50%': { paddingTop: '11vw' },
+    
+    '@keyframes minAnimation': {
+        '0%, 100%': { paddingTop: '10vw' },
+        '50%': { paddingTop: '12vw' },
+      },
+      '@keyframes mobAnimation': {
+        '0%, 100%': { paddingTop: '4vw' },
+        '50%': { paddingTop: '6vw' },
       },
 }));

@@ -6,15 +6,24 @@ import useStyles from './styles';
 
 const steps =['Shipping address', 'Payment details'];
 
-const Checkout = () => {
+const Checkout = ({cart}) => {
     const [activeStep, setActiveStep] = useState(0);
+    const [formData, setFormData] = useState({}); 
     const classes = useStyles();
 
-    const Form = () => activeStep === 0 ? <AddressForm/> : <PaymentForm/>
+    const Form = () => activeStep === 0 ? <AddressForm SubmitNext={SubmitNext} prevStep={prevStep}/> : <PaymentForm formData={formData} cart={cart}/>
+
+    const nextStep = () => setActiveStep((prevActiveStep) => prevActiveStep + 1);
+    const prevStep = () => setActiveStep((prevActiveStep) => prevActiveStep - 1);
 
     const Confirmation = () => {
         <div>Confirmation</div>
     };
+
+    const SubmitNext = (data) => {
+        setFormData(data);
+        nextStep();
+    }
 
     return (
         <>

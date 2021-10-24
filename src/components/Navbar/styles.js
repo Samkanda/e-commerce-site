@@ -20,6 +20,7 @@ export default makeStyles((theme) => ({
     fontFamily: '"Kanit", "sans-serif"',
     fontStyle: 'italic',
     fontSize: "2.5rem",
+    color:"#44474A",
   },
   image: {
     marginRight: '10px',

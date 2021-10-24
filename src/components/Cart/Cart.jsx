@@ -9,10 +9,9 @@ const Cart = ({cart, handleEmptyCart, handleRemoveFromCart, handleUpdateCartQty}
 
     const EmptyCart = () => {
         return(
-        <Typography variant="subtitle1"> You have no items in your shopping cart, start adding some!</Typography>
+            <Typography variant="subtitle1"> You have no items in your shopping cart, start adding some!</Typography>
         )
     }
-
     const FilledCart = () => {
         return(
         <>
@@ -26,14 +25,13 @@ const Cart = ({cart, handleEmptyCart, handleRemoveFromCart, handleUpdateCartQty}
             <div className={classes.cardDetails}>
                     <Typography variant="h4">Subtotal: {cart.subtotal.formatted_with_symbol}</Typography>
                     <div>
-                        <Button className={classes.emptyButton} onclick = { handleEmptyCart} size="large" type="button" variant="contained" color="secondary">Empty Cart</Button>
+                        <Button className={classes.emptyButton} onClick = {handleEmptyCart} size="large" type="button" variant="contained" color="secondary">Empty Cart</Button>
                         <Button className={classes.checkout} size="large" type="button" variant="contained"color="primary" component={Link} to="/checkout">Checkout</Button>
                     </div>
             </div>
         </>
         )
     }
-
     if (!cart.line_items) return 'Loading...'
     return (
         <Container>
@@ -43,5 +41,4 @@ const Cart = ({cart, handleEmptyCart, handleRemoveFromCart, handleUpdateCartQty}
         </Container>
     )
 }
-
 export default Cart

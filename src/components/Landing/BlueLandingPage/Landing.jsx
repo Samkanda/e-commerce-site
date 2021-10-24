@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import {Typography, Grid} from '@material-ui/core';
 import {ArrowDownwardSharp} from '@material-ui/icons';
-
+import {Link} from 'react-scroll';
 import shoe from '../../../assets/blueShoe.png'
 import useStyles from '../BlueLandingPage/styles';
 
@@ -12,19 +12,20 @@ const Landing = ({bluePageChanger, redPageChanger, blackPageChanger}) => {
     return (
         <Main className={classes.main}>
             <Grid className={classes.grid} container>
-                <Grid item md={12} xs={12}>
+                <Grid className={classes.con}item md={12} xs={12}>
                     <Typography className={classes.subtitle}>NIKE JORDAN </Typography>
                     <Typography className={classes.title}>VORTEX 
                         <span className={classes.rightTitle}>COLORS
-                        <span onClick= {redPageChanger} style={{backgroundColor:"red"}}className={classes.dot}></span>
-                        <span onClick= {bluePageChanger} style={{backgroundColor:"blue"}}className={classes.dot}></span>
-                        <span onClick= {blackPageChanger}style={{backgroundColor:"black"}}className={classes.dot}></span>
+                            <span onClick= {redPageChanger} style={{backgroundColor:"red"}}className={classes.dot}></span>
+                            <span onClick= {bluePageChanger} style={{backgroundColor:"blue"}}className={classes.dot}></span>
+                            <span onClick= {blackPageChanger}style={{backgroundColor:"black"}}className={classes.dot}></span>
                         </span>
                     </Typography>
                     <Image className={classes.image} src={shoe} alt="Nike Shoe" />
                     <Typography className={classes.sideTitle}>The Vortex</Typography>
                 </Grid>
-                <Grid item md={5} xs={12}>
+            </Grid>
+            <Grid item md={5} xs={12}>
                 <Typography  className={classes.description}>
                     Inspired by the original that debuted in 1985, the Air Jordan 
                     1 Low offers a clean, classic look that's familiar yet always fresh. 
@@ -32,10 +33,9 @@ const Landing = ({bluePageChanger, redPageChanger, blackPageChanger}) => {
                     and never goes out of style.
                 </Typography>
                 </Grid>
-                <Grid item md={12} xs={12}>
-                    <Typography className={classes.lowerTitle}>SHOP NOW</Typography>
-                    <ArrowDownwardSharp />
-                </Grid>
+            <Grid item md={12} xs={12}>
+                <Link  to="products" spy={true} smooth={true} duration={1000}><Typography className={classes.lowerTitle}>SHOP NOW</Typography>
+                <ArrowDownwardSharp /></Link>
             </Grid>
         </Main>
     )
